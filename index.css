@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+nav {
+  width: 100%;
+  position: sticky;
+  background: rgb(22, 22, 22);
+  left: 0;
+  right: 0;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.navbar-brand {
+  font-size: 35px;
+  font-weight: 600;
+}
+.navbar-brand span {
+  color: crimson;
+  transition: all 0.3s ease;
+}
+.nav-link {
+  color: white !important;
+  font-size: 21px;
+  margin-left: 30px;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: crimson !important;
+}
+
+/* HOME SECTION */
+#home {
+  display: flex;
+  height: 100vh;
+  /*background: linear-gradient(rgba(224, 220, 220, 0.1), rgba(170, 163, 163, 0.2)),
+    url(images/me.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75)),
+    url(images/port.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  color: #fff;
+  min-height: 500px;
+}
+.home {
+  margin: auto;
+  font-family: sans-serif;
+}
+.text-1 {
+  margin-top: 5%;
+  font-size: 27px;
+}
+.text-2 {
+  font-size: 70px;
+  font-weight: 600;
+}
+#home .text {
+  font-size: 45px;
+
+  /*position: absolute;
+  top: 45%;
+  opacity: 0;
+  animation: text 2s ease-in-out; */
+}
+#home .text span {
+  color: crimson;
+  font-weight: 500;
+}
+/* #home p:nth-child(1) {
+  animation-delay: 0s;
+}
+#home p:nth-child(2) {
+  animation-delay: 2s;
+}
+#home p:nth-child(3) {
+  animation-delay: 4s;
+}
+#home p:nth-child(4) {
+  animation-delay: 6s;
+}
+@keyframes text {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+.home a button {
+  display: inline-block;
+  background: crimson;
+  color: white;
+  font-size: 25px;
+  border: none;
+  padding: 12px 36px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.home a button:hover {
+  color: crimson;
+  background: none;
+}
+
+/* about section */
+section {
+  padding: 100px 0;
+}
+.about {
+  font-family: sans-serif;
+}
+.about .title {
+  position: relative;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+.about .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+.about .title::after {
+  content: "who i am";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: crimson;
+  padding: 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-content .left {
+  width: 45%;
+}
+.about .about-content .left img {
+  height: 400px;
+  width: 350px;
+  object-fit: cover;
+}
+.about .about-content .right {
+  width: 55%;
+}
+.about .about-content .right .text-3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about .about-content .right .text-3 span {
+  color: crimson;
+}
+.about .about-content .right p {
+  text-align: justify;
+}
+.about .about-content .right a {
+  display: inline-block;
+  background: crimson;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+  color: crimson;
+  background: none;
+}
+
+/*media query */
+@media screen and (max-width: 576px) {
+  .text-1 {
+    margin-top: 30%;
+  }
+  #home .text {
+    font-size: 24px;
+  }
+  .about .about-content .contnet {
+    width: 100%;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .about-left img {
+    height: 350px;
+    width: 300px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+    margin-left: 10%;
+  }
+}
+@media (max-width: 1104px) {
+  .about .about-content .about-left img {
+    height: 350px;
+    width: 300px;
+  }
+}
