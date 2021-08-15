@@ -57,7 +57,7 @@ nav {
   font-family: sans-serif;
 }
 .text-1 {
-  margin-top: 5%;
+  margin-top: 4%;
   font-size: 27px;
 }
 .text-2 {
@@ -161,6 +161,7 @@ section {
   height: 400px;
   width: 350px;
   object-fit: cover;
+  margin-left: 30px;
 }
 .about .about-content .right {
   width: 55%;
@@ -175,6 +176,7 @@ section {
 }
 .about .about-content .right p {
   text-align: justify;
+  margin-right: 25px;
 }
 .about .about-content .right a {
   display: inline-block;
@@ -194,7 +196,7 @@ section {
 /*media query */
 @media screen and (max-width: 576px) {
   .text-1 {
-    margin-top: 30%;
+    margin-top: 23%;
   }
   #home .text {
     font-size: 24px;
