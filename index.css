@@ -9,7 +9,7 @@
 nav {
   width: 100%;
   position: sticky;
-  background: rgb(22, 22, 22);
+  background: rgb(59, 57, 57);
   left: 0;
   right: 0;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
@@ -115,17 +115,18 @@ nav {
 section {
   padding: 100px 0;
 }
-.about {
+.about,
+.project {
   font-family: sans-serif;
 }
-.about .title {
+section .title {
   position: relative;
   font-size: 40px;
   font-weight: 500;
   margin-bottom: 60px;
   padding-bottom: 20px;
 }
-.about .title::before {
+section .title::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -135,8 +136,7 @@ section {
   background: #111;
   transform: translateX(-50%);
 }
-.about .title::after {
-  content: "who i am";
+section .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -148,7 +148,11 @@ section {
   background: #fff;
   transform: translateX(-50%);
 }
-.about .about-content {
+.about .title::after {
+  content: "who i am";
+}
+.about .about-content,
+.project .proj-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -192,7 +196,49 @@ section {
   color: crimson;
   background: none;
 }
-
+/* project section */
+.project {
+  color: #fff;
+  background: #111;
+}
+.project .title::before {
+  background: #fff;
+}
+.project .title::after {
+  background: #111;
+  content: "what i done";
+}
+.project .card {
+  width: 17rem;
+  border: 1px solid white;
+  background: #222;
+  transition: all 0.3s ease;
+}
+.project .card:hover {
+  background: crimson;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.project .card-title {
+  font-size: 27px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+.project .card .btn {
+  background: crimson;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+  border: 1px solid black;
+}
+.project .card .btn:hover {
+  color: white;
+  background: #222;
+  border: 2px solid white;
+}
 /*media query */
 @media screen and (max-width: 576px) {
   .text-1 {
@@ -218,7 +264,16 @@ section {
     flex: 100%;
     margin-left: 10%;
   }
+  .project .card {
+    margin-left: 10%;
+  }
 }
+@media (min-width: 500px) and (max-width: 600px) {
+  .project .card {
+    margin-left: 20%;
+  }
+}
+
 @media (max-width: 1104px) {
   .about .about-content .about-left img {
     height: 350px;
