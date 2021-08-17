@@ -309,11 +309,12 @@ section .title::after {
     justify-content: center;
     margin: 0 auto 60px;
   }
-  .about .about-content .about-left img {
-    margin-left: 20px;
+  .about .about-content .left img {
+    margin-left: 8px;
     height: 350px;
     width: 300px;
   }
+
   .about .about-content .right {
     flex: 100%;
     margin-left: 10%;
