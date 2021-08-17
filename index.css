@@ -152,7 +152,8 @@ section .title::after {
   content: "who i am";
 }
 .about .about-content,
-.project .proj-content {
+.project .proj-content,
+.skills .skills-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -239,6 +240,59 @@ section .title::after {
   background: #222;
   border: 2px solid white;
 }
+/* Skills Section */
+.skills .title::after {
+  content: "what i know";
+}
+.skills .skills-content .content {
+  width: calc(50% - 30px);
+}
+.skills .skills-content .left .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.skills .skills-content .right .bars {
+  margin-bottom: 15px;
+}
+.skills .skills-content .right .infom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-right: 25px;
+}
+.skills .skills-content .right span {
+  font-weight: 600;
+  font-size: 18px;
+}
+.skills .skills-content .right .line {
+  height: 5px;
+  width: 95%;
+  background: lightgray;
+  position: relative;
+}
+.skills .skills-content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: crimson;
+}
+.skills-content .right .html::before {
+  width: 90%;
+}
+.skills-content .right .css::before {
+  width: 75%;
+}
+.skills-content .right .js::before {
+  width: 50%;
+}
+.skills-content .right .bootstrap::before {
+  width: 70%;
+}
+
 /*media query */
 @media screen and (max-width: 576px) {
   .text-1 {
@@ -267,10 +321,20 @@ section .title::after {
   .project .card {
     margin-left: 10%;
   }
+  .skills .skills-content .content {
+    width: 100%;
+    margin-left: 8%;
+    margin-bottom: 25px;
+  }
 }
 @media (min-width: 500px) and (max-width: 600px) {
   .project .card {
     margin-left: 20%;
+  }
+  .skills .skills-content .content {
+    width: 100%;
+    margin-left: 8%;
+    margin-bottom: 25px;
   }
 }
 
