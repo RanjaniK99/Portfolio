@@ -229,9 +229,7 @@ section .title::after {
   font-weight: 600;
   margin-bottom: 10px;
 }
-.skills .skills-content .left p {
-  font-weight: bold;
-}
+
 .skills .skills-content .right .bars {
   margin-bottom: 15px;
 }
